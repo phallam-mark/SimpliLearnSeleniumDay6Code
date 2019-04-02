@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SeleniumGridSuite" parallel="tests" thread-count="2">
+<!-- testng will run all the methods in the same <test> tag
+	in the same thread, but will each <test> tag will be in a separate thread -->
+  <test name="ChromeTest">
+  	<parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="testCases.BmiTest_2"/>   
+    </classes>
+  </test>
+  <test name="FirefoxTest">
+  	<parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="testCases.BmiTest_2"/>
+    </classes>
+  </test>
+  
+</suite>
